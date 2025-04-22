@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Совместный просмотр</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Совместный просмотр</h1>
+        <div id="status">Подключение...</div>
+        
+        <!-- Видеоплеер -->
+        <iframe id="video-frame" allowfullscreen></iframe>
+        
+        <!-- Управление -->
+        <div class="controls">
+            <input type="text" id="video-url" placeholder="Ссылка на видео (VK/Rutube)">
+            <button id="load-btn">Загрузить</button>
+            <button id="play-btn">▶️ Воспроизвести</button>
+            <button id="pause-btn">⏸️ Пауза</button>
+        </div>
+        
+        <!-- Чат -->
+        <div id="chat-messages"></div>
+        <input type="text" id="chat-input" placeholder="Ваше сообщение">
+        <button id="send-btn">Отправить</button>
+    </div>
+
+    <!-- PeerJS + наш скрипт -->
+    <script src="https://unpackd.now.sh/peerjs@1.4.7"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
